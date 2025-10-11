@@ -6,8 +6,7 @@
         cursor: pointer;
         font-size: 20px;
     }
-    #title {
-        width: 100%;
+    #title { 
         text-align: center;
         margin-top: 50px
     }
