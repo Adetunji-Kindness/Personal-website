@@ -9,7 +9,13 @@
         background-image: url('../images/declan-sun-35Ff2Poa53s-unsplash.jpg');
         background-position: center top;
     }
+.title-section-border {
+    margin-bottom: -5px
+}
 
+.title-section-subtitle {
+    margin-bottom: 40px;
+}
     .title-section-button {
          color: var(--titleSectionPrimaryColor);
          border: solid var(--titleSectionPrimaryColor) 1px;
