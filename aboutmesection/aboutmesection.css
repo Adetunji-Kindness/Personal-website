@@ -20,12 +20,12 @@
 
 .aboutme-icon {
     margin: 10px;
-    color: var( --titleSectionSecondaryColor);
+    color: var(--titleSectionTertiaryColor);
 }
 
 .aboutme-icon:hover {
     cursor: pointer;
-    color: var(--titleSectionTertiaryColor);
+    color: var(--titleSectionPrimaryColor);
 }
 
 .aboutme-download-link > a {
