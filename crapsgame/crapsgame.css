@@ -1,6 +1,6 @@
 #craps-game {
     background-image: url('../images/vegas.jpg');
-    background-position: center top;
+    background-position: center;
     color: white;
 }
 
@@ -13,10 +13,10 @@
     width: min(700px, 80vw);
     height: min(500px, 57vw);
     border: solid white 2px;
-    margin: 100px auto 0 auto;
-    background-image: url('../images/CrapsTable.jpeg');
+    margin: 0 auto 0 auto;
+    background-image: url('../images/crapsTable.jpg');
     background-size: cover;
-    background-position: center top;
+    background-position: center;
 }  
 
 #craps-registration-pane {
