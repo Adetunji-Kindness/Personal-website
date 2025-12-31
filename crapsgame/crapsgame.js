@@ -103,6 +103,7 @@ function rollDice () {
     rollADie({ element: diceRollElement, numberOfDice: 2, callback: processDiceResult, delay: 10000000 });
 }
 
+document.addEventListener("resize", formatDiceScale);
 function formatDiceScale () {
     const vw = window.innerwidth = 0.8
     const vh = window.innerheight = 0.8
