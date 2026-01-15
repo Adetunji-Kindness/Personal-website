@@ -8,7 +8,7 @@
         text-align: center;
         padding-top: 200px;
         background-image: url('../images/declan-sun-35Ff2Poa53s-unsplash.jpg');
-        background-position: center top;
+        background-position: center;
     }
 .title-section-border {
     margin-bottom: -5px
@@ -26,7 +26,7 @@
     }
     button:hover {
         background-color: var(--titleSectionPrimaryColor);
-        color: var(--titleSectionSecondaryColor)
+        color: var(--titleSectionSecondaryColor);
         cursor: pointer;
     }
     
