@@ -1,0 +1,23 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "Personal website",
+  "homepage": "https://github.com/Adetunji-Kindness/Personal-website#readme",
+  "bugs": {
+    "url": "https://github.com/Adetunji-Kindness/Personal-website/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adetunji-Kindness/Personal-website.git"
+  },
+  "license": "ISC",
+  "author": "Kindness Adetunji",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
