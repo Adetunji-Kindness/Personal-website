@@ -16,6 +16,8 @@ export async function analyzestock (stockSymbolToAnalyze: string) {
     return data
 }
 
+export const PrimaryColor = '#467cb8'
+
 export const VerticalAlignContainer = styled.div`
     width: 100%;
     height: 100%;
