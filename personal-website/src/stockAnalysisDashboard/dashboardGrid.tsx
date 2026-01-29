@@ -3,6 +3,7 @@ import 'gridstack/gridstack.main.css'
 import { GridStack } from 'gridstack'
 import { DashboardGridContent } from './stockAnalysisDashboard'
 import NumberStat from './numberStat'
+import lineChartContent from './lineChartContent'
 
 function DashboardGrid({stockData}:{stockData: any}) {
 
@@ -48,6 +49,14 @@ function DashboardGrid({stockData}:{stockData: any}) {
                             center={true}
                         ></NumberStat>
                         </DashboardGridContent> 
+                </div>
+                {/* Second Row */}
+                <div className='grid-stack-item' gs-w="10" gs-h="3">
+                    <DashboardGridContent className="grid-stack-item-content">
+                        <lineChartContent>
+                            priceHistory{stockData.priceHistory}
+                        </lineChartContent>
+                    </DashboardGridContent>
                 </div>
             </div>
         </div>
