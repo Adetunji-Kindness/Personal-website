@@ -4,7 +4,7 @@ import {CategoryScale} from 'chart.js'
 import Chart from 'chart.js/auto'
 Chart.register(CategoryScale)
 
-function lineChartContent({priceHistory}:{priceHistory: any}) {
+function lineChartContent ({priceHistory}:{priceHistory: any}) {
 
     const lineChartData = {
         labels: priceHistory.date,

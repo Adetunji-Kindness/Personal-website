@@ -6,6 +6,7 @@ import NumberStat from './numberStat'
 import { VerticalAlignContainer, VerticalAlignContent } from './stockAnalysisDashboard'
 import { ThemeGreen, ThemeYellow, ThemeRed } from './stockAnalysisDashboard'
 ChartJS.register(ArcElement, Tooltip, Legend)
+import DashboardGrid from './dashboardGrid';
 
 const FlexContainer = styled.div`
     display: flex;
@@ -24,7 +25,7 @@ interface NewsSentimentAnalysisProps {
     newsTextAnalysis: any;
 }
 
-const NewsSentimentAnalysis: React.FC<NewsSentimentAnalysisProps> = (( newsTextAnalysis )) => {
+const NewsSentimentAnalysis: React.FC<NewsSentimentAnalysisProps> = (( newsTextAnalysis )); => {
 
     const sentiment = newsTextAnalysis.data.sentiment
 
@@ -37,7 +38,7 @@ const NewsSentimentAnalysis: React.FC<NewsSentimentAnalysisProps> = (( newsTextA
                 backgroundColor: [ThemeGreen,ThemeRed, ThemeYellow], 
             }
         ]
-}
+    }
 
 const options = {
     responsive: true,
@@ -83,4 +84,4 @@ return (
     </FlexContainer>
     );
 
-export default NewsSentimentAnalysis;
+export default NewsSentimentAnalysis}
