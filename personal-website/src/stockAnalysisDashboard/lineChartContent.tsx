@@ -21,9 +21,9 @@ function lineChartContent({priceHistory}:{priceHistory: any}) {
         <Line
             data={lineChartData}
             options={{
-                maintainAspectRatio: false;
+                maintainAspectRatio: false,
                 plugins: {
-                    titles: {
+                    title: {
                         display: true,
                         text: 'Historical Stock Price'
                     },

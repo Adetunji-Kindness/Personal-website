@@ -3,7 +3,7 @@ import {
     VerticalAlignContent,
     PrimaryColor,
 } from './stockAnalysisDashboard'
-import styled from 'styled-component' 
+import styled from 'styled-components' 
 import number from 'numabbr'
 
 
