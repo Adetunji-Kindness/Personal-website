@@ -4,6 +4,14 @@ import {
     VerticalAlignContainer, 
     VerticalAlignContent,
     DashboardGridContainer,
+    DashboardTitle,
+    DashboardSubTitle,
+    InputContainer,
+    AnalyzeButton,
+    AnalyzeInput,
+    MarginSpace,
+    BackButton,
+    loadingOvalContainer,
 } from './stockAnalysisDashboard'
 import { Oval } from 'react-loader-spinner'
 import './stockAnalysisDashboard.css'
@@ -38,12 +46,20 @@ function StockAnalysisDashboard() {
             <VerticalAlignContainer>
             <VerticalAlignContent>
                 <DashboardGridContainer>
-                <div onClick={() => goBack()}>Back</div>
+                    <DashboardTitle>
+                        {stockData.basicInfo.longName}
+                    </DashboardTitle>
+                    <DashboardSubTitle>
+                        {stockData.basicInfo.sector}
+                    </DashboardSubTitle>
+                    <MarginSpace></MarginSpace>
+                <BackButton onClick={() => goBack()}>Back</BackButton>
                 <div>
                     <DashboardGrid
                         stockData={stockData}
                     ></DashboardGrid>
                 </div>
+                    
                 </DashboardGridContainer>
             </VerticalAlignContent>
             </VerticalAlignContainer>
@@ -54,29 +70,33 @@ function StockAnalysisDashboard() {
         <VerticalAlignContainer>
             <VerticalAlignContent>
                 <div>
-                <div id="stock-analysis--dashboard-title">STOCK ANALYSIS DASHBOARD</div>
+                <DashboardTitle id="stock-analysis--dashboard-title">STOCK ANALYSIS DASHBOARD</DashboardTitle>
                 {isLoading ? (
-                    <div>
+                    <loadingOvalContainer>
+                        <MarginSpace></MarginSpace>
                         <Oval
-                            visible={true}
-                            height="80"
-                            width="44"
-                            color="#4fa94d"
-                            arialabel="oval-loading"
-                            wrapperStyle={{}}
-                            wrapperClass=""
-                        />
-                    </div>
+                        visible={true}
+                        height="80"
+                        color="white"
+                        secondaryColor='white'
+                        ariaLabel="oval-loading"
+                        wrapperStyle={{}}
+                        wrapperClass=""
+                    />
+                    </loadingOvalContainer>
                 ) : (
                     <div>
-                        <div id="stock-analysis--dashboard-subtitle">
+                        <DashboardSubTitle id="stock-analysis--dashboard-subtitle">
                             Put in a stock symbol you'd like to analyze (e.g. MSFT)
-                        </div>
-                        <input 
-                            value={stockSymbol}
-                            onChange={e => setStockSymbol(e.target.value)}
-                        ></input>
-                        <button className="stock-analysis--dashboard-button" onClick={() => runStockAnalysis()}>Analyze</button>
+                        </DashboardSubTitle>
+                        <MarginSpace></MarginSpace>
+                        <InputContainer>
+                            <AnalyzeInput
+                                value={stockSymbol}
+                                onChange={e => setStockSymbol(e.target.value)}
+                            ></AnalyzeInput>
+                        <AnalyzeButton className="stock-analysis--dashboard-button" onClick={() => runStockAnalysis()}>Analyze</AnalyzeButton>
+                        </InputContainer> 
                     </div>
                 )}
                 </div>
